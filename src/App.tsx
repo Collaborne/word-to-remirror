@@ -43,7 +43,13 @@ function FileSelector() {
     <>
       <div style={{ margin: '8px 0 24px 0', padding: '8px', background: 'lightyellow' }}>
         <div>Choose file <code>data/word-file.docx</code></div>
-        <div><input type="file" onChange={handleChange}></input></div>
+        <div>
+          <input
+            type="file"
+            onChange={handleChange}
+            accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          />
+        </div>
       </div>
       {html && (
         <div style={{ background: '#eee', padding: '8px', fontSize: 'x-small' }}>
